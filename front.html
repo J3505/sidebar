@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Vite App</title>
+  </head>
+  <body class="flex h-screen bg-gray-100">
+
+
+  <!-- Main Content-->
+  <main class="flex-1 p-6">
+      <header class="bg-white p-4 mt-2 rounded-xl shadow-sm">
+        <div class="max-w-7xl mx-auto flex items-center justify-between gap-4">
+          <!-- Search Bar -->
+          <div class="relative flex-1 max-w-md">
+            <input
+              type="search"
+              placeholder="Search"
+              class="w-full pl-10 pr-4 py-2 bg-gray-100 rounded-lg outline-none"
+            />
+            <svg
+              class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              />
+            </svg>
+          </div>
+
+          <!-- Date -->
+          <!-- <div class="text-gray-500">Monday, 6th March</div> -->
+           <!-- Lista de tareas -->
+          <span class="text text-body-medium" data-current-date></span>
+
+          <!-- View Toggle -->
+          <div class="flex items-center bg-gray-100 rounded-full p-1">
+            <button
+              class="flex items-center gap-2 px-4 py-1.5 bg-navy-900 text-white rounded-full bg-black"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"
+                />
+              </svg>
+              Card
+            </button>
+
+            <button
+              class="flex items-center gap-2 px-4 py-1.5 text-gray-600 hover:bg-gray-200 rounded-full"
+            >
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 10h16M4 14h16M4 18h16"
+                />
+              </svg>
+              List
+            </button>
+          </div>
+
+          <div>
+            <button
+              class="theme-btn icon-btn large"
+              aria-label="Toggle theme"
+              data-tooltip="Toggle theme"
+              data-theme-btn
+            >
+              
+              <div class="state-layer"></div>
+            </button>
+          </div>
+        </div>
+      </header>
+      <!-- 01 -->
+      <section>
+        <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-12 px-4" id="background">
+          <div class="container mx-auto flex flex-col md:flex-row items-center justify-between py-12 px-4" id="background">
+            <div class="md:w-1/2 space-y-6">
+              <h1 class="text-4xl font-bold leading-tight" id="headerTitle">
+                Check Start Your Personal Business.
+              </h1>
+              <p class="text-gray-600" id="headerDescription">
+                Delivery To Your Home Or Office, Check Full Menu And Items, Safe & Easy Payment From Food King.
+              </p>
+              <div class="flex space-x-4">
+                <button class="bg-green-500 text-white px-4 py-2 rounded shadow hover:bg-green-600">
+                  Order Now
+                </button>
+                <button class="flex items-center space-x-2 text-gray-700">
+                  <span class="bg-gray-200 p-2 rounded-full">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 10v4a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 10c0 7.732-6.268 14-14 14S-9 17.732-9 10 6.268-4 14-4s14 6.268 14 14z" />
+                    </svg>
+                  </span>
+                  <span>Order Process</span>
+                </button>
+              </div>
+              <div class="flex space-x-8 mt-8">
+                <div class="text-center">
+                  <p class="text-2xl font-bold">15% off</p>
+                  <p class="text-sm text-gray-500">ORDERS $59+</p>
+                </div>
+                <div class="text-center">
+                  <p class="text-2xl font-bold">20% off</p>
+                  <p class="text-sm text-gray-500">ORDERS $149+</p>
+                </div>
+              </div>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+              <img
+                src="https://i.ebayimg.com/images/g/n8IAAOSwltRkNCSF/s-l1200.png"
+                alt="Delivery Person"
+                class="w-full h-auto rounded-full"
+                id="headerImage"
+              />
+            </div>
+          </div>
+        </div>
+        
+
+      </section>
+      <!-- 02 -->
+      <section>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 p-4 border rounded-md" id="opciones"> </div>
+        <!-- Modal -->
+        <div id="modalOpciones" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ">
+          <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+            <h2 class="text-2xl font-bold mb-4 uppercase" id="modalTitle">Agregar Opciones</h2>
+            <form id="opcionesForm">
+              <div class="mb-4">
+                <label for="iconImage" class="block text-sm font-medium">link de imagen</label>
+                <input id="iconImage" type="text" class="w-full border rounded-lg px-4 py-2" placeholder="link de imgen" required />
+              </div>
+              <div class="mb-4">
+                <label for="optionTitle" class="block text-sm font-medium">Titulo</label>
+                <input id="optionTitle" type="text" class="w-full border rounded-lg px-4 py-2" placeholder="Ingresar titulo" required />
+              </div>
+              <div class="mb-4">
+                <label for="optionDescription" class="block text-sm font-medium">Descripcion</label>
+                <textarea id="optionDescription" class="w-full border rounded-lg px-4 py-2" placeholder="Ingresar descripcion" required></textarea>
+              </div>
+              <div class="flex justify-end">
+                <button type="button" id="cancelModalOpciones" class="bg-red-500 text-white px-4 py-2 rounded-lg mr-2">Cancelar</button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </section>
+      <!-- 03 -->
+      <section>
+        <div>
+          <h2 class="text-4xl font-bold text-center mb-12">Our Dish Of The Day</h2>
+          <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8" id="dishes"></div>
+          
+          <div class="text-center mt-8">
+            <button id="openModalfoods" class="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 transition-colors uppercase">
+              Ver mas comidas
+            </button>
+          </div>
+        </div>
+              <!-- Modal -->
+      <div id="dishModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+          <h2 class="text-2xl font-bold mb-4" id="modalTitle">Agregar Comida</h2>
+          <form id="dishForm">
+            <div class="mb-4">
+              <label for="dishName" class="block text-sm font-medium">Nombre de la comida</label>
+              <input id="dishName" type="text" class="w-full border rounded-lg px-4 py-2" placeholder="nombre de la comida" required />
+            </div>
+            <div class="mb-4">
+              <label for="dishDescription" class="block text-sm font-medium">Descripcion</label>
+              <textarea id="dishDescription" class="w-full border rounded-lg px-4 py-2" placeholder="descripcion de la comida" required></textarea>
+            </div>
+            <div class="mb-4">
+              <label for="dishPrice" class="block text-sm font-medium">Precio</label>
+              <input id="dishPrice" type="text" class="w-full border rounded-lg px-4 py-2" placeholder="Ingrese precio" required />
+            </div>
+            <div class="mb-4">
+              <label for="dishImage" class="block text-sm font-medium">Link del imagen</label>
+              <input id="dishImage" type="text" class="w-full border rounded-lg px-4 py-2" placeholder="link de la imagen" required />
+            </div>
+            <div class="flex justify-end">
+              <button type="button" id="cancelModal" class="bg-red-500 text-white px-4 py-2 rounded-lg mr-2">Cancelar</button>
+              <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Guardar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      </section>
+
+      <!-- 04 -->
+      <section>
+          <!-- Sección de Chefs -->
+        <div>
+          <h1 class="text-4xl font-bold text-center mb-12">Our Special Chefs</h1>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6" id="chefs"></div>
+        </div>
+
+        <!-- Modal de Chef -->
+        <div id="chefModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
+            <h2 class="text-2xl font-bold mb-4 uppercase" id="modalTitleChef">Agregar chefs</h2>
+            <form id="chefForm">
+              <div class="mb-4">
+                <label for="chefName" class="block text-sm font-medium">Nombre de el chef</label>
+                <input id="chefName" type="text" class="w-full border rounded-lg px-4 py-2" placeholder="nombre de el chef" required />
+              </div>
+              <div class="mb-4">
+                <label for="chefRole" class="block text-sm font-medium">Rol</label>
+                <input id="chefRole" type="text" class="w-full border rounded-lg px-4 py-2" placeholder="Detalles " required />
+              </div>
+              <div class="mb-4">
+                <label for="chefImage" class="block text-sm font-medium">imagen del chef</label>
+                <input id="chefImage" type="text" class="w-full border rounded-lg px-4 py-2" placeholder="imgen del chef" required />
+              </div>
+              <div class="flex justify-end">
+                <button type="button" id="cancelChefModal" class="bg-red-500 text-white px-4 py-2 rounded-lg mr-2">Cancelar</button>
+                <button type="submit" class="bg-teal-500 text-white px-4 py-2 rounded-lg">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section>
+          <!-- Sección de storys-->
+          <div  class="container mx-auto px-4 py-8">
+            <h1 class="text-4xl font-bold text-center mb-8">Story Behind The Food Blog</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="story"></div>
+        </div>
+              <!-- Modal -->
+      <div id="modalReseña" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden">
+        <div class="bg-white p-6 rounded-lg shadow-lg w-96">
+            <h2 class="text-2xl font-bold mb-4">Agregar Reseña</h2>
+            <form id="reviewForm">
+                <div class="mb-4">
+                    <label class="block font-bold mb-2">Imagen (URL):</label>
+                    <input type="text" id="reviewImage" class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div class="mb-4">
+                    <label class="block font-bold mb-2">Título:</label>
+                    <input type="text" id="reviewTitle" class="w-full border border-gray-300 rounded-lg p-2">
+                </div>
+                <div class="mb-4">
+                    <label class="block font-bold mb-2">Descripción:</label>
+                    <textarea id="reviewDescription" class="w-full border border-gray-300 rounded-lg p-2"></textarea>
+                </div>
+                <div class="flex justify-end">
+                    <button type="button" id="cancelModalReseña" class="bg-gray-400 text-white px-4 py-2 rounded-lg mr-2">Cancelar</button>
+                    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Guardar</button>
+                </div>
+            </form>
+        </div>
+      </div>
+      </section>
+
+      <section>
+        <div>
+          <h1 class="text-4xl font-bold text-center mb-12">Our Regulir Menu Pack</h1>
+          <div class="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2" id="packs"></div>
+        </div>
+        <!-- Modal -->
+        <div id="modalMenu" class="hidden fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+            <h2 class="text-2xl font-bold mb-4 uppercase" id="modalTitle">AGREGAR MENU</h2>
+            <form id="menuForm">
+              <div class="mb-4">
+                <label for="menuImage" class="block text-sm font-medium">Link de imagen</label>
+                <input id="menuImage" type="text" class="w-full border rounded-lg px-4 py-2" required />
+              </div>
+              <div class="mb-4">
+                <label for="menuTitle" class="block text-sm font-medium">Titulo</label>
+                <input id="menuTitle" type="text" class="w-full border rounded-lg px-4 py-2"  required />
+              </div>
+              <div class="mb-4">
+                <label for="menuPrice" class="block text-sm font-medium">Precio</label>
+                <input id="menuPrice" type="text" class="w-full border rounded-lg px-4 py-2" required />
+              </div>
+              <div class="mb-4">
+                <label for="menuOldPrice" class="block text-sm font-medium">Precion Anterior</label>
+                <input id="menuOldPrice" type="text" class="w-full border rounded-lg px-4 py-2"/>
+              </div>
+              <div class="mb-4">
+                <label for="menuStars" class="block text-sm font-medium">Calificacion</label>
+                <input id="menuStars" type="number" min="1" max="5" class="w-full border rounded-lg px-4 py-2" placeholder="Ingrese calificacion 1 - 5" required />
+              </div>
+              <div class="flex justify-end">
+                <button type="button" id="cancelModalMenu" class="bg-gray-500 text-white px-4 py-2 rounded-lg mr-2">Cancelar</button>
+                <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded-lg">Guardar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <footer class="p-8 mt-6 rounded-xl bg-black text-white">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <h3 class="font-bold mb-2">about us</h3>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">how it works</a></li>
+                <li><a href="#" class="hover:underline">features</a></li>
+                <li><a href="#" class="hover:underline">integrations</a></li>
+                <li><a href="#" class="hover:underline">pricing</a></li>
+                <li><a href="#" class="hover:underline">enterprise</a></li>
+                <li><a href="#" class="hover:underline">start for free</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">company</h3>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">our rooms</a></li>
+                <li><a href="#" class="hover:underline">stories</a></li>
+                <li><a href="#" class="hover:underline">for hosts</a></li>
+                <li><a href="#" class="hover:underline">referral partners</a></li>
+                <li><a href="#" class="hover:underline">preferred vendor</a></li>
+                <li><a href="#" class="hover:underline">agent referral partners</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">resources</h3>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">member guidelines</a></li>
+                <li><a href="#" class="hover:underline">press</a></li>
+                <li><a href="#" class="hover:underline">FAQ</a></li>
+                <li><a href="#" class="hover:underline">blog</a></li>
+                <li><a href="#" class="hover:underline">saving calculator</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-bold mb-2">our story</h3>
+              <ul class="space-y-1">
+                <li><a href="#" class="hover:underline">media kit</a></li>
+                <li><a href="#" class="hover:underline">inside</a></li>
+                <li><a href="#" class="hover:underline">job</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="flex items-center mb-4">
+              <img src="https://i.pinimg.com/736x/a5/02/ab/a502ab8bc852dece2fd8353f5097d880.jpg" alt="Logo" class="mr-2  w-10 h-10 rounded-lg">
+              <span class="font-bold text-lg">Food Dvey</span>
+            </div>
+            <p class="text-center mb-4">non - docspire agreent seed round seed money accelerator in diluencer.</p>
+            <button class="bg-teal-500 text-white px-4 py-2 rounded">subscribe</button>
+          </div>
+          <div class="flex flex-col items-center">
+            <h3 class="font-bold mb-2">SOCIAL MEDIA</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="hover:text-teal-500"><box-icon type='logo' name='linkedin-square'></box-icon></i></a>
+              <a href="#" class="hover:text-teal-500"><i class="fab fa-instagram"></i></a>
+              <a href="#" class="hover:text-teal-500"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="hover:text-teal-500"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="mt-8 border-t border-gray-700 pt-4">
+          <div class="container mx-auto flex justify-between text-sm">
+            <div class="flex space-x-4">
+              <a href="#" class="hover:underline">cookie statement</a>
+              <a href="#" class="hover:underline">terms of service</a>
+              <a href="#" class="hover:underline">privacy policy</a>
+            </div>
+            <p>&copy; ALL RESERVED BY phyla inc. made with love</p>
+          </div>
+        </div>
+      </footer>
+  </main>
+    <!-- <script type="module" src="/main.js"></script> -->
+    
+    <script type="module" src="backend/a.js"></script>
+    <script type="module" src="backend/bopciones.js"></script>
+    <script type="module" src="backend/cfoods.js"></script>
+    <script type="module" src="backend/dchef.js"></script>
+    <script type="module" src="backend/eresña.js"></script>
+    <script type="module" src="backend//fmenu.js"></script>
+  </body>
+</html>
